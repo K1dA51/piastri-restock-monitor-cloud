@@ -1,0 +1,37 @@
+name: Piastri Restock Check
+
+on:
+  schedule:
+    - cron: "*/5 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  check-restock:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Run restock monitor
+        env:
+          BARK_ENDPOINT: ${{ secrets.BARK_ENDPOINT }}
+          BARK_DEVICE_KEY: ${{ secrets.BARK_DEVICE_KEY }}
+        run: python monitor.py
+
+      - name: Commit baseline if changed
+        run: |
+          git config user.name "piastri-restock-monitor"
+          git config user.email "piastri-restock-monitor@users.noreply.github.com"
+          git add world-circuit-stock.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Update stock baseline"
+            git push
+          fi
