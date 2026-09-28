@@ -133,7 +133,34 @@ def send_bark(items: list) -> None:
         raise RuntimeError(f"Bark 返回 HTTP {code}")
 
 
+def send_test_push() -> None:
+    if not BARK_ENDPOINT or not BARK_DEVICE_KEY:
+        raise RuntimeError("缺少 BARK_ENDPOINT 或 BARK_DEVICE_KEY")
+    payload = json.dumps(
+        {
+            "title": "补货监控测试",
+            "body": "云端监控与 Bark 推送通道正常，补货时会用这个通道通知你。",
+        },
+        ensure_ascii=False,
+    ).encode("utf-8")
+    req = urllib.request.Request(
+        f"{BARK_ENDPOINT}/{BARK_DEVICE_KEY}",
+        data=payload,
+        headers={"User-Agent": UA, "Content-Type": "application/json; charset=utf-8"},
+        method="POST",
+    )
+    with urllib.request.urlopen(req, timeout=20) as resp:
+        code = resp.status
+    if code < 200 or code >= 300:
+        raise RuntimeError(f"Bark 返回 HTTP {code}")
+
+
 def main() -> int:
+    if os.environ.get("BARK_TEST") == "1":
+        send_test_push()
+        print(f"[{now_iso()}] 已发送 Bark 测试推送。", flush=True)
+        return 0
+
     baseline = load_baseline()
     try:
         data = fetch_products()
