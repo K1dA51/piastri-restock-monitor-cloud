@@ -4,6 +4,11 @@ on:
   schedule:
     - cron: "*/5 * * * *"
   workflow_dispatch:
+    inputs:
+      test_bark:
+        description: "发送一条 Bark 测试推送"
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -24,6 +29,7 @@ jobs:
         env:
           BARK_ENDPOINT: ${{ secrets.BARK_ENDPOINT }}
           BARK_DEVICE_KEY: ${{ secrets.BARK_DEVICE_KEY }}
+          BARK_TEST: ${{ inputs.test_bark && '1' || '' }}
         run: python monitor.py
 
       - name: Commit baseline if changed
