@@ -13,6 +13,10 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: piastri-restock
+  cancel-in-progress: false
+
 jobs:
   check-restock:
     runs-on: ubuntu-latest
