@@ -14,7 +14,9 @@
 
 import json
 import os
+import subprocess
 import sys
+import time
 import urllib.request
 from datetime import datetime
 from zoneinfo import ZoneInfo
@@ -27,6 +29,13 @@ BASELINE = os.environ.get("BASELINE_FILE", "world-circuit-stock.json")
 BARK_ENDPOINT = os.environ.get("BARK_ENDPOINT", "").rstrip("/")
 BARK_DEVICE_KEY = os.environ.get("BARK_DEVICE_KEY", "")
 UA = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36"
+PRODUCT_JSON_TEMPLATE = "https://store.oscarpiastri.com/products/{handle}.js"
+HEADERS = {
+    "User-Agent": UA,
+    "Accept": "application/json, text/plain, */*",
+    "Accept-Language": "en-US,en;q=0.9",
+    "Referer": "https://store.oscarpiastri.com/collections/worldcircuit",
+}
 
 WATCH = {
     "worldcircuit-t-shirt-off-white": {
@@ -49,16 +58,78 @@ def now_iso() -> str:
     return datetime.now(ZoneInfo("Asia/Shanghai")).strftime("%Y-%m-%dT%H:%M:%S%z")
 
 
-def fetch_products():
-    req = urllib.request.Request(SOURCE, headers={"User-Agent": UA})
+def curl_json(url: str):
+    """用系统 curl 抓取：Python 的 TLS 指纹会被商店风控判成机器人(429/403)。"""
+    cmd = [
+        "curl",
+        "-sS",
+        "--compressed",
+        "-f",
+        "--max-time",
+        "30",
+        "-A",
+        UA,
+        "-H",
+        "Accept: application/json, text/plain, */*",
+        "-H",
+        "Accept-Language: en-US,en;q=0.9",
+        "-H",
+        "Referer: https://store.oscarpiastri.com/collections/worldcircuit",
+        url,
+    ]
+    proc = subprocess.run(cmd, capture_output=True, text=True)
+    if proc.returncode != 0:
+        raise RuntimeError(f"curl 失败({proc.returncode}): {proc.stderr.strip()[:200]}")
+    return json.loads(proc.stdout)
+
+
+def urllib_json(url: str):
+    req = urllib.request.Request(url, headers=HEADERS)
     with urllib.request.urlopen(req, timeout=30) as resp:
         return json.load(resp)
 
 
-def snapshot_of(data: dict) -> dict:
-    products = []
-    for p in data.get("products", []):
-        products.append(
+def http_json(url: str):
+    try:
+        return curl_json(url)
+    except Exception as curl_err:  # noqa: BLE001
+        try:
+            return urllib_json(url)
+        except Exception as ua_err:  # noqa: BLE001
+            raise RuntimeError(f"请求失败: curl={curl_err}; urllib={ua_err}")
+
+
+def fetch_collection() -> list:
+    return http_json(SOURCE).get("products", [])
+
+
+def fetch_per_product() -> list:
+    return [
+        http_json(PRODUCT_JSON_TEMPLATE.format(handle=handle))
+        for handle in WATCH
+    ]
+
+
+def fetch_products(retries: int = 4) -> list:
+    """集合接口失败时改用单品 .js 接口，并对 403/网络抖动做退避重试。"""
+    last_err = None
+    for attempt in range(retries):
+        for fetch in (fetch_collection, fetch_per_product):
+            try:
+                products = fetch()
+                if products:
+                    return products
+            except Exception as err:  # noqa: BLE001
+                last_err = err
+        if attempt < retries - 1:
+            time.sleep(min(30, 5 * (2 ** attempt)))
+    raise RuntimeError(f"抓取失败: {last_err}")
+
+
+def snapshot_of(raw_products: list) -> dict:
+    output = []
+    for p in raw_products:
+        output.append(
             {
                 "id": p["id"],
                 "handle": p["handle"],
@@ -73,7 +144,7 @@ def snapshot_of(data: dict) -> dict:
     return {
         "checked_at": now_iso(),
         "source": SOURCE,
-        "products": products,
+        "products": output,
     }
 
 
@@ -163,12 +234,12 @@ def main() -> int:
 
     baseline = load_baseline()
     try:
-        data = fetch_products()
+        products = fetch_products()
     except Exception as err:  # noqa: BLE001
         print(f"[{now_iso()}] {err}", flush=True)
         return 1
 
-    new_snapshot = snapshot_of(data)
+    new_snapshot = snapshot_of(products)
     if baseline is None:
         save_baseline(new_snapshot)
         print(f"[{now_iso()}] 首次运行：已保存当前库存作为基线，暂不提醒。", flush=True)
