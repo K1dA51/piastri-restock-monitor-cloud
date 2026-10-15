@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-10-15T22:26:15+0800",
+  "checked_at": "2026-10-16T02:26:15+0800",
   "source": "https://store.oscarpiastri.com/collections/worldcircuit/products.json?limit=250",
   "products": [
     {
@@ -16,7 +16,7 @@
         {
           "id": 55614570529144,
           "title": "Blue / S",
-          "available": true
+          "available": false
         },
         {
           "id": 55614570561912,
@@ -379,7 +379,7 @@
         {
           "id": 55614629806456,
           "title": "Off White / S",
-          "available": true
+          "available": false
         },
         {
           "id": 55614629839224,
@@ -521,7 +521,7 @@
         {
           "id": 55614640357752,
           "title": "Blue / S",
-          "available": true
+          "available": false
         },
         {
           "id": 55614640390520,
