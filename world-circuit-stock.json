@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-10-01T23:42:19+0800",
+  "checked_at": "2026-10-15T22:26:15+0800",
   "source": "https://store.oscarpiastri.com/collections/worldcircuit/products.json?limit=250",
   "products": [
     {
@@ -16,7 +16,7 @@
         {
           "id": 55614570529144,
           "title": "Blue / S",
-          "available": false
+          "available": true
         },
         {
           "id": 55614570561912,
@@ -26,12 +26,12 @@
         {
           "id": 55614570594680,
           "title": "Blue / L",
-          "available": false
+          "available": true
         },
         {
           "id": 55614570627448,
           "title": "Blue / XL",
-          "available": false
+          "available": true
         },
         {
           "id": 55614570660216,
@@ -351,7 +351,7 @@
         {
           "id": 55614747902328,
           "title": "XL",
-          "available": true
+          "available": false
         },
         {
           "id": 55614747935096,
@@ -374,17 +374,17 @@
         {
           "id": 55614629773688,
           "title": "Off White / XS",
-          "available": false
+          "available": true
         },
         {
           "id": 55614629806456,
           "title": "Off White / S",
-          "available": false
+          "available": true
         },
         {
           "id": 55614629839224,
           "title": "Off White / M",
-          "available": false
+          "available": true
         },
         {
           "id": 55614629871992,
@@ -394,7 +394,7 @@
         {
           "id": 55614629904760,
           "title": "Off White / XL",
-          "available": false
+          "available": true
         },
         {
           "id": 55614629937528,
@@ -417,12 +417,12 @@
         {
           "id": 55614646223224,
           "title": "XS",
-          "available": false
+          "available": true
         },
         {
           "id": 55614646255992,
           "title": "S",
-          "available": false
+          "available": true
         },
         {
           "id": 55614646288760,
@@ -460,7 +460,7 @@
         {
           "id": 55615195644280,
           "title": "Default Title",
-          "available": false
+          "available": true
         }
       ]
     },
@@ -503,7 +503,7 @@
         {
           "id": 55614493622648,
           "title": "3XL",
-          "available": true
+          "available": false
         }
       ]
     },
@@ -521,17 +521,17 @@
         {
           "id": 55614640357752,
           "title": "Blue / S",
-          "available": false
+          "available": true
         },
         {
           "id": 55614640390520,
           "title": "Blue / M",
-          "available": false
+          "available": true
         },
         {
           "id": 55614640423288,
           "title": "Blue / L",
-          "available": false
+          "available": true
         },
         {
           "id": 55614640456056,
@@ -541,12 +541,12 @@
         {
           "id": 55614640488824,
           "title": "Blue / XXL",
-          "available": false
+          "available": true
         },
         {
           "id": 55614640521592,
           "title": "Blue / 3XL",
-          "available": false
+          "available": true
         }
       ]
     },
