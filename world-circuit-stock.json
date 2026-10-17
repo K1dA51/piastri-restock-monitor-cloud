@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-10-17T09:49:15+0800",
+  "checked_at": "2026-10-18T00:46:05+0800",
   "source": "https://store.oscarpiastri.com/collections/worldcircuit/products.json?limit=250",
   "products": [
     {
@@ -384,7 +384,7 @@
         {
           "id": 55614629839224,
           "title": "Off White / M",
-          "available": true
+          "available": false
         },
         {
           "id": 55614629871992,
