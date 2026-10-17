@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-10-16T05:33:57+0800",
+  "checked_at": "2026-10-17T09:49:15+0800",
   "source": "https://store.oscarpiastri.com/collections/worldcircuit/products.json?limit=250",
   "products": [
     {
@@ -26,7 +26,7 @@
         {
           "id": 55614570594680,
           "title": "Blue / L",
-          "available": true
+          "available": false
         },
         {
           "id": 55614570627448,
@@ -72,7 +72,7 @@
         {
           "id": 55614564532600,
           "title": "Burgundy / S",
-          "available": true
+          "available": false
         },
         {
           "id": 55614564565368,
@@ -374,7 +374,7 @@
         {
           "id": 55614629773688,
           "title": "Off White / XS",
-          "available": true
+          "available": false
         },
         {
           "id": 55614629806456,
@@ -389,7 +389,7 @@
         {
           "id": 55614629871992,
           "title": "Off White / L",
-          "available": true
+          "available": false
         },
         {
           "id": 55614629904760,
@@ -531,7 +531,7 @@
         {
           "id": 55614640423288,
           "title": "Blue / L",
-          "available": true
+          "available": false
         },
         {
           "id": 55614640456056,
