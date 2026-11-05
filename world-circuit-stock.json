@@ -1,46 +1,89 @@
 {
-  "checked_at": "2026-10-18T00:46:05+0800",
+  "checked_at": "2026-11-06T00:37:28+0800",
   "source": "https://store.oscarpiastri.com/collections/worldcircuit/products.json?limit=250",
   "products": [
     {
-      "id": 15043171647864,
-      "handle": "worldcircuit-hoodie-blue",
-      "title": "World Circuit Hoodie - Blue",
-      "url": "https://store.oscarpiastri.com/products/worldcircuit-hoodie-blue",
+      "id": 15043202253176,
+      "handle": "worldcircuit-race-jacket",
+      "title": "World Circuit Race Jacket",
+      "url": "https://store.oscarpiastri.com/products/worldcircuit-race-jacket",
       "variants": [
         {
-          "id": 55614570496376,
-          "title": "Blue / XS",
-          "available": false
-        },
-        {
-          "id": 55614570529144,
-          "title": "Blue / S",
-          "available": false
-        },
-        {
-          "id": 55614570561912,
-          "title": "Blue / M",
-          "available": false
-        },
-        {
-          "id": 55614570594680,
-          "title": "Blue / L",
-          "available": false
-        },
-        {
-          "id": 55614570627448,
-          "title": "Blue / XL",
+          "id": 55614747771256,
+          "title": "XS",
           "available": true
         },
         {
-          "id": 55614570660216,
-          "title": "Blue / XXL",
+          "id": 55614747804024,
+          "title": "S",
           "available": true
         },
         {
-          "id": 55614570692984,
-          "title": "Blue / 3XL",
+          "id": 55614747836792,
+          "title": "M",
+          "available": true
+        },
+        {
+          "id": 55614747869560,
+          "title": "L",
+          "available": true
+        },
+        {
+          "id": 55614747902328,
+          "title": "XL",
+          "available": true
+        },
+        {
+          "id": 55614747935096,
+          "title": "XXL",
+          "available": true
+        },
+        {
+          "id": 55614747967864,
+          "title": "3XL",
+          "available": true
+        }
+      ]
+    },
+    {
+      "id": 15043152445816,
+      "handle": "worldcircuit-quarter-zip-burgundy",
+      "title": "World Circuit Quarter Zip - Burgundy",
+      "url": "https://store.oscarpiastri.com/products/worldcircuit-quarter-zip-burgundy",
+      "variants": [
+        {
+          "id": 55614482579832,
+          "title": "Burgundy / XS",
+          "available": true
+        },
+        {
+          "id": 55614482612600,
+          "title": "Burgundy / S",
+          "available": true
+        },
+        {
+          "id": 55614482645368,
+          "title": "Burgundy / M",
+          "available": true
+        },
+        {
+          "id": 55614482678136,
+          "title": "Burgundy / L",
+          "available": true
+        },
+        {
+          "id": 55614482710904,
+          "title": "Burgundy / XL",
+          "available": true
+        },
+        {
+          "id": 55614482743672,
+          "title": "Burgundy / XXL",
+          "available": true
+        },
+        {
+          "id": 55614482776440,
+          "title": "Burgundy / 3XL",
           "available": true
         }
       ]
@@ -77,12 +120,12 @@
         {
           "id": 55614564565368,
           "title": "Burgundy / M",
-          "available": true
+          "available": false
         },
         {
           "id": 55614564598136,
           "title": "Burgundy / L",
-          "available": true
+          "available": false
         },
         {
           "id": 55614564630904,
@@ -102,6 +145,118 @@
       ]
     },
     {
+      "id": 15043186721144,
+      "handle": "worldcircuit-layered-t-shirt-blue",
+      "title": "World Circuit Layered T-Shirt - Blue",
+      "url": "https://store.oscarpiastri.com/products/worldcircuit-layered-t-shirt-blue",
+      "variants": [
+        {
+          "id": 55614640324984,
+          "title": "Blue / XS",
+          "available": true
+        },
+        {
+          "id": 55614640357752,
+          "title": "Blue / S",
+          "available": true
+        },
+        {
+          "id": 55614640390520,
+          "title": "Blue / M",
+          "available": true
+        },
+        {
+          "id": 55614640423288,
+          "title": "Blue / L",
+          "available": true
+        },
+        {
+          "id": 55614640456056,
+          "title": "Blue / XL",
+          "available": true
+        },
+        {
+          "id": 55614640488824,
+          "title": "Blue / XXL",
+          "available": true
+        },
+        {
+          "id": 55614640521592,
+          "title": "Blue / 3XL",
+          "available": true
+        }
+      ]
+    },
+    {
+      "id": 15043344859512,
+      "handle": "worldcircuit-bag-charm",
+      "title": "World Circuit Bag Charm",
+      "url": "https://store.oscarpiastri.com/products/worldcircuit-bag-charm",
+      "variants": [
+        {
+          "id": 55615195644280,
+          "title": "Default Title",
+          "available": true
+        }
+      ]
+    },
+    {
+      "id": 15043206381944,
+      "handle": "worldcircuit-tote-bag",
+      "title": "World Circuit Tote Bag",
+      "url": "https://store.oscarpiastri.com/products/worldcircuit-tote-bag",
+      "variants": [
+        {
+          "id": 55614783619448,
+          "title": "Default Title",
+          "available": true
+        }
+      ]
+    },
+    {
+      "id": 15043181183352,
+      "handle": "worldcircuit-fleece",
+      "title": "World Circuit Fleece",
+      "url": "https://store.oscarpiastri.com/products/worldcircuit-fleece",
+      "variants": [
+        {
+          "id": 55614605525368,
+          "title": "XS",
+          "available": true
+        },
+        {
+          "id": 55614605558136,
+          "title": "S",
+          "available": true
+        },
+        {
+          "id": 55614605590904,
+          "title": "M",
+          "available": true
+        },
+        {
+          "id": 55614605623672,
+          "title": "L",
+          "available": true
+        },
+        {
+          "id": 55614605656440,
+          "title": "XL",
+          "available": true
+        },
+        {
+          "id": 55614605689208,
+          "title": "XXL",
+          "available": true
+        },
+        {
+          "id": 55614605721976,
+          "title": "3XL",
+          "available": true
+        }
+      ]
+    },
+    {
       "id": 15043196420472,
       "handle": "worldcircuit-long-sleeve-t-shirt-blue",
       "title": "World Circuit Long Sleeve T-Shirt - Blue",
@@ -115,12 +270,12 @@
         {
           "id": 55614670930296,
           "title": "Blue / S",
-          "available": true
+          "available": false
         },
         {
           "id": 55614670963064,
           "title": "Blue / M",
-          "available": true
+          "available": false
         },
         {
           "id": 55614670995832,
@@ -196,7 +351,7 @@
         {
           "id": 55614556995960,
           "title": "Off White / XS",
-          "available": true
+          "available": false
         },
         {
           "id": 55614557028728,
@@ -226,49 +381,6 @@
         {
           "id": 55614557192568,
           "title": "Off White / 3XL",
-          "available": true
-        }
-      ]
-    },
-    {
-      "id": 15043181183352,
-      "handle": "worldcircuit-fleece",
-      "title": "World Circuit Fleece",
-      "url": "https://store.oscarpiastri.com/products/worldcircuit-fleece",
-      "variants": [
-        {
-          "id": 55614605525368,
-          "title": "XS",
-          "available": true
-        },
-        {
-          "id": 55614605558136,
-          "title": "S",
-          "available": true
-        },
-        {
-          "id": 55614605590904,
-          "title": "M",
-          "available": true
-        },
-        {
-          "id": 55614605623672,
-          "title": "L",
-          "available": true
-        },
-        {
-          "id": 55614605656440,
-          "title": "XL",
-          "available": true
-        },
-        {
-          "id": 55614605689208,
-          "title": "XXL",
-          "available": true
-        },
-        {
-          "id": 55614605721976,
-          "title": "3XL",
           "available": true
         }
       ]
@@ -310,57 +422,44 @@
       ]
     },
     {
-      "id": 15043206381944,
-      "handle": "worldcircuit-tote-bag",
-      "title": "World Circuit Tote Bag",
-      "url": "https://store.oscarpiastri.com/products/worldcircuit-tote-bag",
+      "id": 15043171647864,
+      "handle": "worldcircuit-hoodie-blue",
+      "title": "World Circuit Hoodie - Blue",
+      "url": "https://store.oscarpiastri.com/products/worldcircuit-hoodie-blue",
       "variants": [
         {
-          "id": 55614783619448,
-          "title": "Default Title",
-          "available": true
-        }
-      ]
-    },
-    {
-      "id": 15043202253176,
-      "handle": "worldcircuit-race-jacket",
-      "title": "World Circuit Race Jacket",
-      "url": "https://store.oscarpiastri.com/products/worldcircuit-race-jacket",
-      "variants": [
-        {
-          "id": 55614747771256,
-          "title": "XS",
+          "id": 55614570496376,
+          "title": "Blue / XS",
           "available": false
         },
         {
-          "id": 55614747804024,
-          "title": "S",
+          "id": 55614570529144,
+          "title": "Blue / S",
           "available": false
         },
         {
-          "id": 55614747836792,
-          "title": "M",
+          "id": 55614570561912,
+          "title": "Blue / M",
           "available": false
         },
         {
-          "id": 55614747869560,
-          "title": "L",
+          "id": 55614570594680,
+          "title": "Blue / L",
           "available": false
         },
         {
-          "id": 55614747902328,
-          "title": "XL",
+          "id": 55614570627448,
+          "title": "Blue / XL",
           "available": false
         },
         {
-          "id": 55614747935096,
-          "title": "XXL",
-          "available": true
+          "id": 55614570660216,
+          "title": "Blue / XXL",
+          "available": false
         },
         {
-          "id": 55614747967864,
-          "title": "3XL",
+          "id": 55614570692984,
+          "title": "Blue / 3XL",
           "available": true
         }
       ]
@@ -417,12 +516,12 @@
         {
           "id": 55614646223224,
           "title": "XS",
-          "available": true
+          "available": false
         },
         {
           "id": 55614646255992,
           "title": "S",
-          "available": true
+          "available": false
         },
         {
           "id": 55614646288760,
@@ -452,19 +551,6 @@
       ]
     },
     {
-      "id": 15043344859512,
-      "handle": "worldcircuit-bag-charm",
-      "title": "World Circuit Bag Charm",
-      "url": "https://store.oscarpiastri.com/products/worldcircuit-bag-charm",
-      "variants": [
-        {
-          "id": 55615195644280,
-          "title": "Default Title",
-          "available": true
-        }
-      ]
-    },
-    {
       "id": 15043153953144,
       "handle": "worldcircuit-rugby-shirt",
       "title": "World Circuit Rugby Shirt",
@@ -478,7 +564,7 @@
         {
           "id": 55614493458808,
           "title": "S",
-          "available": false
+          "available": true
         },
         {
           "id": 55614493491576,
@@ -503,92 +589,6 @@
         {
           "id": 55614493622648,
           "title": "3XL",
-          "available": false
-        }
-      ]
-    },
-    {
-      "id": 15043186721144,
-      "handle": "worldcircuit-layered-t-shirt-blue",
-      "title": "World Circuit Layered T-Shirt - Blue",
-      "url": "https://store.oscarpiastri.com/products/worldcircuit-layered-t-shirt-blue",
-      "variants": [
-        {
-          "id": 55614640324984,
-          "title": "Blue / XS",
-          "available": false
-        },
-        {
-          "id": 55614640357752,
-          "title": "Blue / S",
-          "available": false
-        },
-        {
-          "id": 55614640390520,
-          "title": "Blue / M",
-          "available": false
-        },
-        {
-          "id": 55614640423288,
-          "title": "Blue / L",
-          "available": false
-        },
-        {
-          "id": 55614640456056,
-          "title": "Blue / XL",
-          "available": false
-        },
-        {
-          "id": 55614640488824,
-          "title": "Blue / XXL",
-          "available": true
-        },
-        {
-          "id": 55614640521592,
-          "title": "Blue / 3XL",
-          "available": true
-        }
-      ]
-    },
-    {
-      "id": 15043152445816,
-      "handle": "worldcircuit-quarter-zip-burgundy",
-      "title": "World Circuit Quarter Zip - Burgundy",
-      "url": "https://store.oscarpiastri.com/products/worldcircuit-quarter-zip-burgundy",
-      "variants": [
-        {
-          "id": 55614482579832,
-          "title": "Burgundy / XS",
-          "available": false
-        },
-        {
-          "id": 55614482612600,
-          "title": "Burgundy / S",
-          "available": false
-        },
-        {
-          "id": 55614482645368,
-          "title": "Burgundy / M",
-          "available": false
-        },
-        {
-          "id": 55614482678136,
-          "title": "Burgundy / L",
-          "available": false
-        },
-        {
-          "id": 55614482710904,
-          "title": "Burgundy / XL",
-          "available": false
-        },
-        {
-          "id": 55614482743672,
-          "title": "Burgundy / XXL",
-          "available": false
-        },
-        {
-          "id": 55614482776440,
-          "title": "Burgundy / 3XL",
           "available": false
         }
       ]
