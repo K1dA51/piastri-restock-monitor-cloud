@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-11-14T05:02:00+0800",
+  "checked_at": "2026-11-16T05:13:47+0800",
   "source": "https://store.oscarpiastri.com/collections/worldcircuit/products.json?limit=250",
   "products": [
     {
@@ -158,7 +158,7 @@
         {
           "id": 55614640357752,
           "title": "Blue / S",
-          "available": true
+          "available": false
         },
         {
           "id": 55614640390520,
