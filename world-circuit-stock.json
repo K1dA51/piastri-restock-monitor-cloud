@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-11-24T09:44:42+0800",
+  "checked_at": "2026-11-25T05:28:58+0800",
   "source": "https://store.oscarpiastri.com/collections/worldcircuit/products.json?limit=250",
   "products": [
     {
@@ -64,7 +64,7 @@
         {
           "id": 55614482645368,
           "title": "Burgundy / M",
-          "available": true
+          "available": false
         },
         {
           "id": 55614482678136,
