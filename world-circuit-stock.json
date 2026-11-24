@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-11-21T01:47:35+0800",
+  "checked_at": "2026-11-24T09:44:42+0800",
   "source": "https://store.oscarpiastri.com/collections/worldcircuit/products.json?limit=250",
   "products": [
     {
@@ -59,7 +59,7 @@
         {
           "id": 55614482612600,
           "title": "Burgundy / S",
-          "available": true
+          "available": false
         },
         {
           "id": 55614482645368,
@@ -168,7 +168,7 @@
         {
           "id": 55614640423288,
           "title": "Blue / L",
-          "available": true
+          "available": false
         },
         {
           "id": 55614640456056,
